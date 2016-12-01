@@ -47,7 +47,7 @@ namespace Arkivverket.Arkade.Identify
 
             string workingDirectory = PrepareWorkingDirectory(uuid);
 
-            DirectoryInfo archiveExtractionDirectory = new DirectoryInfo(Path.Combine(workingDirectory, uuid.GetValue()));
+            DirectoryInfo archiveExtractionDirectory = new DirectoryInfo(Path.Combine(workingDirectory, uuid.GetValue(), "content"));
 
             // TODO: The logic in this conditional should be moved to ArchiveDirectory.ExtractToWorkDir() and ArchiveFile.ExtractToWorkDir() 
             if (IsTar)

@@ -37,6 +37,11 @@ namespace Arkivverket.Arkade.Core
 
             return structureFilename;
         }
+
+        public FileInfo GetInfoXmlFile()
+        {
+            return new FileInfo(Path.Combine(WorkingDirectory.FullName, Path.DirectorySeparatorChar.ToString(), "info.xml"));
+        }
     }
 
     public enum ArchiveType
